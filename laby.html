@@ -1,0 +1,156 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/KrauseFx/markdown-to-html-github-style@master/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+<h1 id="laby-api-routes">Laby API Routes</h1>
+<p>This API uses laby.net’s database. These docs aim to serve as a guide on how to use this API and what responses can possibly be returned.</p>
+<h3 id="get-labyusernameuuidstats"><code>GET /laby/:username|uuid/stats</code></h3>
+<h3 id="possible-responses">Possible responses</h3>
+<p>Here are the different responses that can be returned:</p>
+<p><strong>Displays All Stats / HTTP <code>200</code>:</strong></p>
+<div><div><pre><code class="json language-json">{
+  "first_joined": "2015-12-04",
+  "last_online": "2021-07-16",
+  "playtime": {
+    "duration": "2622",
+    "average": "375",
+    "streak": 3
+  },
+  "most_played_server": {
+    "nice_name": "play.roxbot.com",
+    "server_name": "play.roxbot.com",
+    "direct_ip": "play.roxbot.com",
+    "sumduration": "75258",
+    "servergroup": "0"
+  }
+}</code></pre></div></div>
+<p><strong>No stats found / HTTP <code>404</code>:</strong></p>
+<div><div><pre><code class="json language-json">{
+  "error": "no_stats_found"
+}</code></pre></div></div>
+<p><strong>User not found / HTTP <code>404</code>:</strong></p>
+<div><div><pre><code class="json language-json">{
+  "error": "user_not_found"
+}</code></pre></div></div>
+<h3 id="get-labyusernameuuidfriends"><code>GET /laby/:username|uuid/friends</code></h3>
+<h3 id="possible-responses-1">Possible responses</h3>
+<p>Here are the different responses that can be returned:</p>
+<p><strong>Displays All Friends / HTTP <code>200</code>:</strong></p>
+<div><div><pre><code class="json language-json">{
+  "friends": [
+    {
+      "username": "zsg",
+      "uuid": "bc772d9f-94ea-449c-a87a-fa588fa32a90",
+      "color": "#AA00AA",
+      "mc_color": "§5"
+    },
+    {
+      "username": "babyMart",
+      "uuid": "64b961d7-0ab7-47d4-be68-1ea98e915dba",
+      "color": null,
+      "mc_color": null
+    }
+  ]
+}</code></pre></div></div>
+<p><strong>No friends found / HTTP <code>404</code>:</strong></p>
+<div><div><pre><code class="json language-json">{
+  "error": "no_friends_found"
+}</code></pre></div></div>
+<p><strong>User not found / HTTP <code>404</code>:</strong></p>
+<div><div><pre><code class="json language-json">{
+  "error": "user_not_found"
+}</code></pre></div></div>
+<h3 id="get-labyusernameuuidtextures"><code>GET /laby/:username|uuid/textures</code></h3>
+<h3 id="possible-responses-2">Possible responses</h3>
+<p>Here are the different responses that can be returned:</p>
+<p><strong>All Textures / HTTP <code>200</code>:</strong></p>
+<div><div><pre><code class="json language-json">{
+  "skins": [
+    {
+      "texture": "https://laby.net/texture/image/ad3d57a7c754eb8cabcaace0f6b45e05.png",
+      "cropped_texture": "https://laby.net/texture/head/ad3d57a7c754eb8cabcaace0f6b45e05.png"
+    },
+    {
+      "texture": "https://laby.net/texture/image/e5aaa2780ae070460ac2915345472755.png",
+      "cropped_texture": "https://laby.net/texture/head/e5aaa2780ae070460ac2915345472755.png"
+    },
+    {
+      "texture": "https://laby.net/texture/image/abba96c88565a86a6d34c8a08d8541d8.png",
+      "cropped_texture": "https://laby.net/texture/head/abba96c88565a86a6d34c8a08d8541d8.png"
+    },
+    {
+      "texture": "https://laby.net/texture/image/8290af34cb72d956c23eba31bb9d6c1e.png",
+      "cropped_texture": "https://laby.net/texture/head/8290af34cb72d956c23eba31bb9d6c1e.png"
+    },
+    {
+      "texture": "https://laby.net/texture/image/5b563ae705e8482fdd163ec7e8f7404c.png",
+      "cropped_texture": "https://laby.net/texture/head/5b563ae705e8482fdd163ec7e8f7404c.png"
+    },
+    {
+      "texture": "https://laby.net/texture/image/80e7ea65811628d2999fde806cee79b5.png",
+      "cropped_texture": "https://laby.net/texture/head/80e7ea65811628d2999fde806cee79b5.png"
+    }
+  ],
+    "capes": [
+    {
+      "type": "official",
+      "texture": "https://laby.net/texture/image/de4a8ad0267f4fc0f41a732ebcf10ec9.png",
+      "cropped_texture": "https://laby.net/texture/cape/de4a8ad0267f4fc0f41a732ebcf10ec9.png"
+    },
+    {
+      "type": "labymod",
+      "texture": "https://laby.net/texture/image/d13223f140e5d21d7b0967a04642b99f.png",
+      "cropped_texture": "https://laby.net/texture/cape/d13223f140e5d21d7b0967a04642b99f.png"
+    }
+  ]
+}</code></pre></div></div>
+<p><strong>No Cape Textures / HTTP <code>200</code>:</strong></p>
+<div><div><pre><code class="json language-json">{
+  "skins": [
+    {
+      "texture": "https://laby.net/texture/image/ad3d57a7c754eb8cabcaace0f6b45e05.png",
+      "cropped_texture": "https://laby.net/texture/head/ad3d57a7c754eb8cabcaace0f6b45e05.png"
+    },
+    {
+      "texture": "https://laby.net/texture/image/e5aaa2780ae070460ac2915345472755.png",
+      "cropped_texture": "https://laby.net/texture/head/e5aaa2780ae070460ac2915345472755.png"
+    },
+    {
+      "texture": "https://laby.net/texture/image/abba96c88565a86a6d34c8a08d8541d8.png",
+      "cropped_texture": "https://laby.net/texture/head/abba96c88565a86a6d34c8a08d8541d8.png"
+    },
+    {
+      "texture": "https://laby.net/texture/image/8290af34cb72d956c23eba31bb9d6c1e.png",
+      "cropped_texture": "https://laby.net/texture/head/8290af34cb72d956c23eba31bb9d6c1e.png"
+    },
+    {
+      "texture": "https://laby.net/texture/image/5b563ae705e8482fdd163ec7e8f7404c.png",
+      "cropped_texture": "https://laby.net/texture/head/5b563ae705e8482fdd163ec7e8f7404c.png"
+    },
+    {
+      "texture": "https://laby.net/texture/image/80e7ea65811628d2999fde806cee79b5.png",
+      "cropped_texture": "https://laby.net/texture/head/80e7ea65811628d2999fde806cee79b5.png"
+    }
+  ],
+  "capes": []
+}</code></pre></div></div>
+<p><strong>No Textures / HTTP <code>404</code>:</strong></p>
+<div><div><pre><code class="json language-json">{
+  "skins": [],
+  "capes": []
+}</code></pre></div></div>
+<h3 id="get-labyusernameuuidstatus"><code>GET /laby/:username|uuid/status</code></h3>
+<h3 id="possible-responses-3">Possible responses</h3>
+<p>Here are the different responses that can be returned:</p>
+<p><strong>Displays The Users Status / HTTP <code>200</code>:</strong></p>
+<div><div><pre><code class="json language-json">{
+// User is online 
+  "status": "online"
+}
+// User is offline
+{
+  "status": "offline"
+}</code></pre></div></div>
+<p><strong>User not found / HTTP <code>404</code>:</strong></p>
+<div><div><pre><code class="json language-json">{
+  "error": "user_not_found"
+}</code></pre></div></div>
+<p>Copyright <a href="https://github.com/withdrew">Faav</a> 2021, all rights reserved.</p>

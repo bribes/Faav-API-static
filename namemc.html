@@ -1,0 +1,124 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/KrauseFx/markdown-to-html-github-style@master/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+<h1 id="namemc-api-routes">NameMC API Routes</h1>
+<p>This API scrapes <a href="https://namemc.com/">NameMC</a> so it can break at any time. These docs aim to serve as a guide on how to use this API and what responses can possibly be returned.</p>
+<h3 id="get-namemc-capes"><code>GET /namemc-capes</code></h3>
+<p>This is currently the only endpoint for this API.</p>
+<h3 id="possible-responses">Possible responses</h3>
+<p>Here are the different responses that can be returned:</p>
+<p><strong>Displays All Capes (Sorted by Cape Count from Highest to Lowest) / HTTP <code>200</code>:</strong></p>
+<div><div><pre><code class="json language-json">{
+  "capes": [
+    {
+      "name": "MineCon 2016",
+      "hash": "1981aad373fa9754",
+      "count": 7138
+    },
+    {
+      "name": "MineCon 2015",
+      "hash": "72ee2cfcefbfc081",
+      "count": 6557
+    },
+    {
+      "name": "MineCon 2013",
+      "hash": "0e4cc75a5f8a886d",
+      "count": 5941
+    },
+    {
+      "name": "MineCon 2012",
+      "hash": "ebc798c3f7eca2a3",
+      "count": 3873
+    },
+    {
+      "name": "MineCon 2011",
+      "hash": "9349fa25c64ae935",
+      "count": 3344
+    },
+    {
+      "name": "Migrator",
+      "hash": "8a6cc02cc86e43f1",
+      "count": 2839
+    },
+    {
+      "name": "Realms Mapmaker",
+      "hash": "11a3dcc4d826d0a1",
+      "count": 236
+    },
+    {
+      "name": "Mojang",
+      "hash": "cb5dd34bee340182",
+      "count": 183
+    },
+    {
+      "name": "Translator",
+      "hash": "129a4675704fa3b8",
+      "count": 102
+    },
+    {
+      "name": "Mojira Moderator",
+      "hash": "8dd71c1ee6ec0ae4",
+      "count": 51
+    },
+    {
+      "name": "Cobalt",
+      "hash": "696b6cc29946b968",
+      "count": 20
+    },
+    {
+      "name": "Mojang (Classic)",
+      "hash": "298ae017a64261ad",
+      "count": 16
+    },
+    {
+      "name": "Scrolls",
+      "hash": "116bacd62b233157",
+      "count": 9
+    },
+    {
+      "name": "Translator (Chinese)",
+      "hash": "d059f1a18b159eb6",
+      "count": 3
+    },
+    {
+      "name": "Turtle",
+      "hash": "8c05ef3c54870d04",
+      "count": 2
+    },
+    {
+      "name": "Birthday",
+      "hash": "aab5a23c7495fc70",
+      "count": 1
+    },
+    {
+      "name": "dB",
+      "hash": "77421d9cf72e07e9",
+      "count": 1
+    },
+    {
+      "name": "Millionth Customer",
+      "hash": "d3c7ac835b24eb29",
+      "count": 1
+    },
+    {
+      "name": "Prismarine",
+      "hash": "88f1509813f4e324",
+      "count": 1
+    },
+    {
+      "name": "Snowman",
+      "hash": "5e68fa78bd9df310",
+      "count": 1
+    },
+    {
+      "name": "Spade",
+      "hash": "7a939dc1a7ad4505",
+      "count": 1
+    },
+    {
+      "name": "Translator (Japanese)",
+      "hash": "aa02d4b62762ff22",
+      "count": 0
+    }
+  ]
+}</code></pre></div></div>
+<p>Copyright <a href="https://github.com/withdrew">Faav</a> 2021, all rights reserved.</p>
