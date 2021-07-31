@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>docs for api.faav.tk | Profiles API</title>
-	<link href="https://cdn.jsdelivr.net/gh/KrauseFx/markdown-to-html-github-style@master/style.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css" rel="stylesheet">
-</head>
-<body>
-	<h1 id="profiles-api-routes">Profiles API Routes</h1>
-	<p>This API uses laby.net’s database if a user doesnt appear in this API its because laby.net hasn’t cached the account yet. These docs aim to serve as a guide on how to use this API and what responses can possibly be returned.</p>
-	<h3 id="get-profilesusername"><code>GET /profiles/:username</code></h3>
-	<p>This is currently the only endpoint for this API.</p>
-	<h3 id="possible-responses">Possible responses</h3>
-	<p>Here are the different responses that can be returned:</p>
-	<p><strong>Profiles Found / HTTP <code>200</code>:</strong></p>
-	<div>
-		<div>
-			<pre><code class="json language-json">{
+   <head>
+      <title>docs for api.faav.tk | Profiles API</title>
+      <link href="https://cdn.jsdelivr.net/gh/KrauseFx/markdown-to-html-github-style@master/style.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css" rel="stylesheet">
+   </head>
+   <body>
+      <h1 id="profiles-api-routes">Profiles API Routes</h1>
+      <p>This API uses laby.net’s database if a user doesnt appear in this API its because laby.net hasn’t cached the account yet. These docs aim to serve as a guide on how to use this API and what responses can possibly be returned.</p>
+      <h3 id="get-profilesusername"><code>GET /profiles/:username</code></h3>
+      <p>This is currently the only endpoint for this API.</p>
+      <h3 id="possible-responses">Possible responses</h3>
+      <p>Here are the different responses that can be returned:</p>
+      <p><strong>Profiles Found / HTTP <code>200</code>:</strong></p>
+      <div>
+         <div>
+            <pre><code class="json language-json">{
   "profiles": [
     {
       "username": "Ask",
@@ -57,16 +57,16 @@
     }
   ]
 }</code></pre>
-		</div>
-	</div>
-	<p><strong>Profiles Not Found / HTTP <code>404</code></strong>:</p>
-	<div class="language-json highlighter-rouge">
-		<div>
-			<pre><code class="json language-json">{
+         </div>
+      </div>
+      <p><strong>Profiles Not Found / HTTP <code>404</code></strong>:</p>
+      <div class="language-json highlighter-rouge">
+         <div>
+            <pre><code class="json language-json">{
   "profiles": []
 }</code></pre>
-		</div>
-	</div>
-	<p>Copyright <a href="https://github.com/withdrew">Faav</a> 2021, all rights reserved.</p>
-</body>
+         </div>
+      </div>
+      <p>Copyright <a href="https://github.com/withdrew">Faav</a> 2021, all rights reserved.</p>
+   </body>
 </html>
