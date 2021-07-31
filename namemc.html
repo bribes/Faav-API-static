@@ -1,14 +1,21 @@
-<title>docs for api.faav.tk | NameMC API</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/KrauseFx/markdown-to-html-github-style@master/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
-<h1 id="namemc-api-routes">NameMC API Routes</h1>
-<p>This API scrapes <a href="https://namemc.com/">NameMC</a> so it can break at any time. These docs aim to serve as a guide on how to use this API and what responses can possibly be returned.</p>
-<h3 id="get-namemc-capes"><code>GET /namemc-capes</code></h3>
-<p>This is currently the only endpoint for this API.</p>
-<h3 id="possible-responses">Possible responses</h3>
-<p>Here are the different responses that can be returned:</p>
-<p><strong>Displays All Capes (Sorted by Cape Count from Highest to Lowest) / HTTP <code>200</code>:</strong></p>
-<div><div><pre><code class="json language-json">{
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>docs for api.faav.tk | NameMC API</title>
+    <link href="https://cdn.jsdelivr.net/gh/KrauseFx/markdown-to-html-github-style@master/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1 id="namemc-api-routes">NameMC API Routes</h1>
+    <p>This API scrapes <a href="https://namemc.com/">NameMC</a> so it can break at any time. These docs aim to serve as a guide on how to use this API and what responses can possibly be returned.</p>
+    <h3 id="get-namemc-capes"><code>GET /namemc-capes</code></h3>
+    <p>This is currently the only endpoint for this API.</p>
+    <h3 id="possible-responses">Possible responses</h3>
+    <p>Here are the different responses that can be returned:</p>
+    <p><strong>Displays All Capes (Sorted by Cape Count from Highest to Lowest) / HTTP <code>200</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
   "capes": [
     {
       "name": "MineCon 2016",
@@ -121,5 +128,9 @@
       "count": 0
     }
   ]
-}</code></pre></div></div>
-<p>Copyright <a href="https://github.com/withdrew">Faav</a> 2021, all rights reserved.</p>
+}</code></pre>
+      </div>
+    </div>
+    <p>Copyright <a href="https://github.com/withdrew">Faav</a> 2021, all rights reserved.</p>
+  </body>
+</html>
